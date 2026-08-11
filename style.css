@@ -1,0 +1,96 @@
+/* --- CSS Reset agar tampilan sama di semua browser --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Gunakan Font yang lebih modern & bersih */
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    /* Ganti warna background biru muda tadi dengan abu-abu sangat muda yang elegan */
+    background-color: #f7f9fc;
+    
+    /* Membuat konten di tengah layar (Vertikal & Horizontal) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* --- Desain Kartu (Card) Modern --- */
+.card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    
+    /* Sudut yang lebih membulat halus */
+    border-radius: 20px;
+    
+    /* Shadow (bayangan) yang lebih lembut dan menyebar */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    
+    /* Animasi muncul halus saat halaman dimuat */
+    animation: slideUp 0.6s ease-out;
+}
+
+/* --- Desain Judul (H1) --- */
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+/* --- Desain Paragraf (P) --- */
+p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* --- Desain Tombol (Button) ala App Profesional --- */
+button {
+    background-color: #007bff; /* Warna biru utama modern */
+    color: #ffffff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 12px; /* Sudut tombol membulat halus */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%; /* Tombol melebar penuh di dalam card */
+    
+    /* Efek transisi halus saat disentuh/di-hover */
+    transition: all 0.2s ease;
+    
+    /* Memberikan sedikit shadow pada tombol */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.25);
+}
+
+/* --- Efek saat Tombol ditekan atau di-hover (di HP biasanya saat ditekan) --- */
+button:hover, button:active {
+    background-color: #0056b3; /* Biru lebih gelap */
+    transform: translateY(-2px); /* Tombol sedikit terangkat */
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.35);
+}
+
+/* --- KEYFRAMES untuk animasi slideUp --- */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
